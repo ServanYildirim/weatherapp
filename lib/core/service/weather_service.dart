@@ -13,8 +13,6 @@ class WeatherService with ChangeNotifier {
   final String baseUrl = "https://api.openweathermap.org/data/2.5/weather";
 
   final String geoCodingApiBaseURL = "https://api.openweathermap.org/geo/1.0/direct?q";
-  int? currentCondition;
-  double? currentTempature;
 
   Future<WeatherReponseModel?> getCurrentTempature({required double latitude, required double longitude}) async {
     final url = "$baseUrl?lat=$latitude&lon=$longitude&appid=$apiKey&units=metric";
